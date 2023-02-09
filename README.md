@@ -5,8 +5,8 @@
 ## 配置
 > 用法
 ```
-    config.Init(ENV)
-    stringValue := config.GetViper.GetString(KEY)
+	config.Init(ENV)
+	stringValue := config.GetViper.GetString(KEY)
 ```
 ## 数据库
 > 用法
