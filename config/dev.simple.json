@@ -1,0 +1,13 @@
+{
+    "listen": "8080",
+    "database": {
+        "base": {
+            "host": "mysql",
+            "port": "3306",
+            "dbname": "dbname",
+            "username": "user",
+            "password": "pass",
+            "prifix": ""
+        }
+    }
+}
