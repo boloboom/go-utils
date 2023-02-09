@@ -15,6 +15,6 @@ func Init(env string) {
 	}
 }
 
-func GetViper() *viper.Viper {
+func Instance() *viper.Viper {
 	return config
 }

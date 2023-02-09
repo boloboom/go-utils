@@ -6,13 +6,17 @@
 > 用法
 ```
 	config.Init(ENV)
-	stringValue := config.GetViper.GetString(KEY)
+	stringValue := config.Instance().GetString(KEY)
 ```
 ## 数据库
 > 用法
-
 ```
 	database.Init()
-	baseDb := database.Get("base")
+	baseDb := database.Instance("base")
 ```
 ## 缓存
+```
+	cache.Init()
+	var ctx = context.Background()
+	cache.Instance().Set(ctx, "test", "123456", 0).Err()
+```

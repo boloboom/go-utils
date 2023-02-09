@@ -12,8 +12,12 @@ import (
 var databases = make(map[string]*gorm.DB)
 
 func Init() {
-	conf := config.GetViper()
+	conf := config.Instance()
 	dbConfigs := conf.GetStringMap("database")
+	if len(dbConfigs) == 0 {
+		log.Fatal("数据库配置获取失败！")
+	}
+
 	for key, value := range dbConfigs {
 		dbConfig := value.(map[string]interface{})
 
@@ -23,7 +27,7 @@ func Init() {
 		var username = dbConfig["username"].(string)
 		var password = dbConfig["password"].(string)
 		var prefix = dbConfig["prefix"].(string)
-		
+
 		dsn := username + ":" + password + "@tcp(" + host + ":" + port + ")/" + dbname + "?charset=utf8mb4&parseTime=True&loc=Local"
 		db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 			NamingStrategy: schema.NamingStrategy{
@@ -37,7 +41,7 @@ func Init() {
 	}
 }
 
-func Get(key string) *gorm.DB {
+func Instance(key string) *gorm.DB {
 	db, ok := databases[key]
 	if !ok {
 		log.Fatal("数据库配置不存在")
