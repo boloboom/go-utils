@@ -1,4 +1,4 @@
-module bolo/go-utils
+module hyperuo/go-utils
 
 go 1.19
 

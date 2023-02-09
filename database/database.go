@@ -1,7 +1,7 @@
 package database
 
 import (
-	"bolo/go-utils/config"
+	"hyperuo/go-utils/config"
 	"log"
 
 	"gorm.io/driver/mysql"
