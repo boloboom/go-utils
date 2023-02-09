@@ -1,8 +1,9 @@
 package database
 
 import (
-	"hyperuo/go-utils/config"
 	"log"
+
+	"github.com/hyperuo/go-utils/config"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

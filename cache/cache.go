@@ -3,9 +3,10 @@ package cache
 import (
 	"context"
 	"fmt"
-	"hyperuo/go-utils/config"
 	"log"
 	"time"
+
+	"github.com/hyperuo/go-utils/config"
 
 	"github.com/redis/go-redis/v9"
 )

@@ -1,4 +1,4 @@
-module hyperuo/go-utils
+module github.com/hyperuo/go-utils
 
 go 1.19
 
