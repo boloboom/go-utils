@@ -3,7 +3,7 @@ package database
 import (
 	"log"
 
-	"github.com/hyperuo/go-utils/config"
+	"github.com/boloboom/go-utils/config"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

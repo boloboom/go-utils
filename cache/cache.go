@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/hyperuo/go-utils/config"
+	"github.com/boloboom/go-utils/config"
 
 	"github.com/redis/go-redis/v9"
 )

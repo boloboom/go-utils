@@ -1,4 +1,4 @@
-module github.com/hyperuo/go-utils
+module github.com/boloboom/go-utils
 
 go 1.19
 
